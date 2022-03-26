@@ -2,7 +2,7 @@
 
 namespace Shape;
 
-abstract class Shape implements ShapeInterface
+abstract class Shape
 {
     protected string $name;
 
