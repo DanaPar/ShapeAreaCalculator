@@ -1,7 +1,7 @@
 <?php
 namespace Shape;
 
-class Rectangle extends Square implements ShapeInterface
+class Rectangle extends Square
 {
     private float $width;
 
