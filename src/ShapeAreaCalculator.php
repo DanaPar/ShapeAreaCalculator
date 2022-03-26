@@ -3,7 +3,7 @@ namespace Shape;
 
 class ShapeAreaCalculator
 {
-    public function calculate(ShapeInterface $shape): float {
+    public function calculate(Shape $shape): float {
         return $shape->area();
     }
 }

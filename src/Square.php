@@ -1,26 +1,18 @@
 <?php
 namespace Shape;
 
-class Square implements ShapeInterface
+class Square extends Shape
 {
     protected float $length;
-    private string $name;
 
-    public function __construct(float $length)
+    public function __construct(float $length, $name)
     {
+        parent::__construct($name);
         $this->length = $length;
     }
 
 
-    public function setName(string $name) {
-        $this->name = $name;
-    }
-
-    public function getName(): string{
-        return $this->name;
-    }
-
-    public function area()
+    public function area(): float
     {
         return $this->length * $this->length;
     }

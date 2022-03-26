@@ -2,26 +2,19 @@
 namespace Shape;
 
 
-class Circle  implements ShapeInterface
+class Circle  extends Shape
 {
     private float $radius;
-    private string $name;
 
-    public function __construct(float $radius){
+
+    public function __construct(float $radius, $name){
+        parent::__construct($name);
         $this->radius = $radius;
-
     }
 
-    public function setName(string $name){
-        $this->name = $name;
-    }
 
-        public function getName(): string
+    public function area(): float
     {
-        return $this->name;
-    }
-
-    public function area(): float{
         return pi() * pow($this->radius, 2);
     }
 

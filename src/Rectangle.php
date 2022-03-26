@@ -5,16 +5,15 @@ class Rectangle extends Square implements ShapeInterface
 {
     private float $width;
 
-    public function __construct($length, $width){
-        parent::__construct($length);
+    public function __construct($length, $width, $name)
+    {
+        parent::__construct($length, $name);
         $this->width = $width;
-
     }
 
-
-    public function area(): float{
+    public function area(): float
+    {
         return $this->length * $this->width;
-
     }
 
 

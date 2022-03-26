@@ -14,14 +14,13 @@ $sqLength = $_POST["lengthsq"];
 $radius = $_POST["radius"];
 
 if (isset($_POST["rectangle"])){
-    $shape = new Rectangle($length, $width);
+    $shape = new Rectangle($length, $width, $name);
 } elseif (isset($_POST["square"])){
-    $shape = new Square($sqLength);
+    $shape = new Square($sqLength, $name);
 } elseif (isset($_POST["circle"])){
-    $shape = new Circle($radius);
+    $shape = new Circle($radius, $name);
 }
 
-$shape->setName($name);
 
 
 $math = new ShapeAreaCalculator();
