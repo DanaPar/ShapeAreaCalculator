@@ -13,7 +13,7 @@ class Rectangle extends Square
 
     public function area(): float
     {
-        return $this->length * $this->width;
+        return $this->getLength() * $this->width;
     }
 
 

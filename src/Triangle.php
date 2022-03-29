@@ -14,7 +14,7 @@ class Triangle extends RightAngleTriangle
 
     public function area(): float
     {
-        $halfPerimeter = ($this->lengthA + $this->lengthB +$this->lengthC) / 2;
-        return sqrt($halfPerimeter * ($halfPerimeter - $this->lengthA) * ($halfPerimeter - $this->lengthB) * ($halfPerimeter - $this->lengthC));
+        $halfPerimeter = ($this->getLengthA() + $this->getLengthB() +$this->lengthC) / 2;
+        return sqrt($halfPerimeter * ($halfPerimeter - $this->getLengthA()) * ($halfPerimeter - $this->getLengthB()) * ($halfPerimeter - $this->lengthC));
     }
 }

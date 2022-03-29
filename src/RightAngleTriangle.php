@@ -3,7 +3,7 @@ namespace Shape;
 class RightAngleTriangle extends EquilateralTriangle
 {
 
-    protected float $lengthB;
+    private float $lengthB;
 
 
     public function __construct(float $lengthA, float $lengthB, string $name)
@@ -12,8 +12,12 @@ class RightAngleTriangle extends EquilateralTriangle
         $this->lengthB = $lengthB;
     }
 
+    protected function getLengthB(): float{
+        return $this->lengthB;
+    }
+
     public function area(): float
     {
-        return 1 / 2 * $this->lengthA * $this->lengthB;
+        return 1 / 2 * $this->getLengthA() * $this->lengthB;
     }
 }

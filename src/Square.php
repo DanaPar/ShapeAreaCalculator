@@ -3,7 +3,7 @@ namespace Shape;
 
 class Square extends Shape
 {
-    protected float $length;
+    private float $length;
 
     public function __construct(float $length, string $name)
     {
@@ -11,6 +11,9 @@ class Square extends Shape
         $this->length = $length;
     }
 
+    protected function getLength(): float{
+        return $this->length;
+    }
 
     public function area(): float
     {

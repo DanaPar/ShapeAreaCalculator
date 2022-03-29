@@ -2,12 +2,16 @@
 namespace Shape;
 class EquilateralTriangle extends Shape
 {
-    protected float $lengthA;
+    private float $lengthA;
 
     public function __construct(float $lengthA, string $name)
     {
         parent::__construct($name);
         $this->lengthA = $lengthA;
+    }
+
+    protected function getLengthA(): float{
+        return $this->lengthA;
     }
 
     public function area(): float
