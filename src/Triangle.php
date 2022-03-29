@@ -6,7 +6,7 @@ class Triangle extends RightAngleTriangle
 
     private float $lengthC;
 
-    public function __construct($lengthA, $lengthB, $lengthC, $name)
+    public function __construct(float $lengthA, float $lengthB, float $lengthC, string $name)
     {
         parent::__construct($lengthA, $lengthB, $name);
         $this->lengthC = $lengthC;

@@ -4,7 +4,7 @@ class EquilateralTriangle extends Shape
 {
     protected float $lengthA;
 
-    public function __construct($lengthA, $name)
+    public function __construct(float $lengthA, string $name)
     {
         parent::__construct($name);
         $this->lengthA = $lengthA;

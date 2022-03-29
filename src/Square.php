@@ -5,7 +5,7 @@ class Square extends Shape
 {
     protected float $length;
 
-    public function __construct(float $length, $name)
+    public function __construct(float $length, string $name)
     {
         parent::__construct($name);
         $this->length = $length;

@@ -6,7 +6,7 @@ class RightAngleTriangle extends EquilateralTriangle
     protected float $lengthB;
 
 
-    public function __construct($lengthA, $lengthB, $name)
+    public function __construct(float $lengthA, float $lengthB, string $name)
     {
         parent::__construct($lengthA, $name);
         $this->lengthB = $lengthB;
