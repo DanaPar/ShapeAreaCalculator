@@ -3,7 +3,7 @@ namespace Shape;
 class EquilateralTriangle extends Shape
 {
     private float $lengthA;
-    const QUARTER = 4;
+    private const QUARTER = 4;
 
     public function __construct(float $lengthA, string $name)
     {

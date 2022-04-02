@@ -4,8 +4,8 @@ class RightAngleTriangle extends EquilateralTriangle
 {
 
     private float $lengthB;
-    const ONE = 1;
-    const FOR_HALFING = 2;
+    private const ONE = 1;
+    protected const FOR_HALFING = 2;
 
     public function __construct(float $lengthA, float $lengthB, string $name)
     {
