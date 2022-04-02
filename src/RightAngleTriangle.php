@@ -4,7 +4,8 @@ class RightAngleTriangle extends EquilateralTriangle
 {
 
     private float $lengthB;
-
+    const ONE = 1;
+    const FOR_HALFING = 2;
 
     public function __construct(float $lengthA, float $lengthB, string $name)
     {
@@ -18,6 +19,6 @@ class RightAngleTriangle extends EquilateralTriangle
 
     public function area(): float
     {
-        return 1 / 2 * $this->getLengthA() * $this->lengthB;
+        return self::ONE / self::FOR_HALFING * $this->getLengthA() * $this->lengthB;
     }
 }

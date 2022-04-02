@@ -3,6 +3,7 @@ namespace Shape;
 class EquilateralTriangle extends Shape
 {
     private float $lengthA;
+    const QUARTER = 4;
 
     public function __construct(float $lengthA, string $name)
     {
@@ -16,6 +17,6 @@ class EquilateralTriangle extends Shape
 
     public function area(): float
     {
-        return sqrt(3) / 4 * $this->lengthA * $this->lengthA;
+        return M_SQRT3 / self::QUARTER * $this->lengthA * $this->lengthA;
     }
 }
