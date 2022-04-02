@@ -10,7 +10,7 @@ class EquilateralTriangle extends Shape
         $this->lengthA = $lengthA;
     }
 
-    protected function getLengthA(): float{
+    final public function getLengthA(): float{
         return $this->lengthA;
     }
 

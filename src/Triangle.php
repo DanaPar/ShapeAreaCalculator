@@ -1,7 +1,7 @@
 <?php
 namespace Shape;
 
-class Triangle extends RightAngleTriangle
+final class Triangle extends RightAngleTriangle
 {
 
     private float $lengthC;
@@ -12,7 +12,7 @@ class Triangle extends RightAngleTriangle
         $this->lengthC = $lengthC;
     }
 
-    public function area(): float
+   public function area(): float
     {
         $halfPerimeter = ($this->getLengthA() + $this->getLengthB() +$this->lengthC) / 2;
         return sqrt($halfPerimeter * ($halfPerimeter - $this->getLengthA()) * ($halfPerimeter - $this->getLengthB()) * ($halfPerimeter - $this->lengthC));

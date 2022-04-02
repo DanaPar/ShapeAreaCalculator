@@ -12,7 +12,7 @@ class RightAngleTriangle extends EquilateralTriangle
         $this->lengthB = $lengthB;
     }
 
-    protected function getLengthB(): float{
+    final public function getLengthB(): float{
         return $this->lengthB;
     }
 

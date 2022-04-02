@@ -2,7 +2,7 @@
 namespace Shape;
 
 
-class Circle  extends Shape
+final class Circle  extends Shape
 {
     private float $radius;
 

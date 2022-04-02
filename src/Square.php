@@ -11,7 +11,7 @@ class Square extends Shape
         $this->length = $length;
     }
 
-    protected function getLength(): float{
+    final public function getLength(): float{
         return $this->length;
     }
 

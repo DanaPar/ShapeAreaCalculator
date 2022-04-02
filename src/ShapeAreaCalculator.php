@@ -1,7 +1,7 @@
 <?php
 namespace Shape;
 
-class ShapeAreaCalculator
+final class ShapeAreaCalculator
 {
     public function calculate(Shape $shape): float {
         return $shape->area();
