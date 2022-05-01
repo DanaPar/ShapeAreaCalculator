@@ -18,7 +18,7 @@ class ShapeFactory
     private string $lengthB;
     private string $lengthC;
 
-public function __construct(string $name, $length, $width, $sqLength, $radius, $eqLength, $rLengthA, $rLengthB, $lengthA, $lengthB, $lengthC){
+public function __construct(string $name, string $length, string $width, string $sqLength, string $radius, string $eqLength, string $rLengthA, string $rLengthB, string $lengthA, string $lengthB, string $lengthC){
     $this->name = $name;
     $this->length = $length;
     $this->width = $width;
