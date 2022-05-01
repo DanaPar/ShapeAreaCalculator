@@ -5,7 +5,7 @@ namespace Shape;
 class ShapeFactory
 {
 
-    protected Shape $shape;
+    private Shape $shape;
     private string $name;
     private string $length;
     private string $width;
