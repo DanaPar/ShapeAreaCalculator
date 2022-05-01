@@ -1,12 +1,8 @@
 <?php
 require ("vendor/autoload.php");
 
-use Shape\Circle;
-use Shape\Rectangle;
-use Shape\Square;
-use Shape\RightAngleTriangle;
-use Shape\EquilateralTriangle;
-use Shape\Triangle;
+use Shape\ShapeEnum;
+use Shape\ShapeFactory;
 use Shape\ShapeAreaCalculator;
 
 $name = $_POST["name"];
@@ -21,23 +17,25 @@ $lengthA = $_POST["lengthA"];
 $lengthB = $_POST["lengthB"];
 $lengthC = $_POST["lengthC"];
 
+
 if (isset($_POST["rectangle"])){
-    $shape = new Rectangle($length, $width, $name);
+    $enum = ShapeEnum::Rectangle;
 } elseif (isset($_POST["square"])){
-    $shape = new Square($sqLength, $name);
+    $enum = ShapeEnum::Square;
 } elseif (isset($_POST["circle"])){
-    $shape = new Circle($radius, $name);
+    $enum =ShapeEnum::Circle;
 } elseif (isset($_POST["eqTriangle"])){
-    $shape = new EquilateralTriangle($eqLength, $name);
+    $enum = ShapeEnum::EquilateralTriangle;
 } elseif (isset($_POST["rTriangle"])){
-    $shape = new RightAngleTriangle($rLengthA, $rLengthB, $name);
+    $enum =ShapeEnum::RightAngleTriangle;
 } elseif (isset($_POST["triangle"])){
-    $shape = new Triangle($lengthA, $lengthB, $lengthC, $name);
+    $enum = ShapeEnum::Triangle;
+} else {
+    $enum = "Shape not found";
 }
 
 
-
-
+$shape = new ShapeFactory($name, $length, $width, $sqLength, $radius, $eqLength, $rLengthA, $rLengthB, $lengthA, $lengthB, $lengthC);
 $math = new ShapeAreaCalculator();
-echo "Shape " . $shape->getName() . " area is " . $math->calculate($shape) . "\n";
+echo $math->calculate($shape->createShape($enum));
 
