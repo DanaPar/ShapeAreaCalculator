@@ -2,12 +2,12 @@
 namespace Shape;
 
 
-class Circle  extends Shape
+final class Circle  extends Shape
 {
     private float $radius;
+    private const SQUARE = 2;
 
-
-    public function __construct(float $radius, $name){
+    public function __construct(float $radius, string $name){
         parent::__construct($name);
         $this->radius = $radius;
     }
@@ -15,7 +15,7 @@ class Circle  extends Shape
 
     public function area(): float
     {
-        return pi() * pow($this->radius, 2);
+        return pi() * pow($this->radius, self::SQUARE);
     }
 
 

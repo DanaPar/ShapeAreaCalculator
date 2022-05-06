@@ -1,11 +1,11 @@
 <?php
 namespace Shape;
 
-class Rectangle extends Square
+final class Rectangle extends Square
 {
     private float $width;
 
-    public function __construct($length, $width, $name)
+    public function __construct(float $length, float $width, string $name)
     {
         parent::__construct($length, $name);
         $this->width = $width;
@@ -13,7 +13,7 @@ class Rectangle extends Square
 
     public function area(): float
     {
-        return $this->length * $this->width;
+        return $this->getLength() * $this->width;
     }
 
 
